@@ -1,0 +1,3 @@
+﻿  card.cpp
+D:\black jack OOP\black jack OOP\black jack OOP\card.cpp(75): warning C4715:  Card::get_score: значение возвращается не при всех путях выполнения
+  black jack OOP.vcxproj -> D:\black jack OOP\black jack OOP\Debug\black jack OOP.exe

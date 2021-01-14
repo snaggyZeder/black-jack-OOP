@@ -1,5 +1,6 @@
-﻿#include "deck.h"
-#include "card.h"
+﻿#include "card.h"
+#include "deck.h"
+#include <iostream>
 Deck::Deck() {
 	for (int j = 0; j < Card::MAX_SUITS; j++) {
 		for (int k = 0; k < Card::MAX_RANK; k++) {
@@ -24,5 +25,13 @@ void Deck::shuffle() {
 			//îáěĺí˙ëč ěĺńňŕěč ňĺęóůóţ č ńëó÷ŕéíî âűáđŕííóţ ęŕđňó
 			swap(m_deck[i], m_deck[randomCard]);
 		}
+	}
+}
+
+void Deck::print_deck() {
+	int size = m_deck.size();
+	for (int i = 0; i < size; i++) {
+		//m_deck[i].print_card();
+		std::cout << m_deck[i];
 	}
 }
