@@ -35,3 +35,9 @@ void Deck::print_deck() {
 		std::cout << m_deck[i];
 	}
 }
+
+Card Deck::pop() {
+	Card temp = m_deck[m_deck.size()-1];
+	 m_deck.pop_back();
+	 return temp;
+}
