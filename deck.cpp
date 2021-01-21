@@ -31,8 +31,8 @@ void Deck::shuffle() {
 void Deck::print_deck() {
 	int size = m_deck.size();
 	for (int i = 0; i < size; i++) {
-		//m_deck[i].print_card();
-		std::cout << m_deck[i];
+		m_deck[i].print_card();
+		/*std::cout << m_deck[i];*/
 	}
 }
 

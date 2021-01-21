@@ -30,5 +30,5 @@ Hand::GameStatus Hand::checkGameStatus() {
 	int score = calculateScore();
 	if (score < 21) {return Hand::GAME_CONTINUE;}
 	else if(score==21){	return Hand::WIN_;}
-	else  return Hand::LOST_; 
+	else if (score > 21) { return Hand::LOOSE_; }
 }

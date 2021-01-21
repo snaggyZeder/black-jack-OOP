@@ -12,7 +12,7 @@ public:
 	enum GameStatus {
 		GAME_CONTINUE,
 		WIN_,
-		LOST_,
+		LOOSE_,
 		MAX_STATUS
 	};
 	//Hand();

@@ -3,10 +3,7 @@
 #include"card.h"
 #include<vector>
 #include"hand.h"
-
-
-class Player:public Hand{
+class Dialer:public Hand {
 public:
-	void playp(Deck&);
-	
+	void playd(Deck&);
 };
