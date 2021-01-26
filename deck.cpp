@@ -1,6 +1,7 @@
 ﻿#include "card.h"
 #include "deck.h"
 #include <iostream>
+#include <ctime>
 Deck::Deck() {
 	for (int j = 0; j < Card::MAX_SUITS; j++) {
 		for (int k = 0; k < Card::MAX_RANK; k++) {
@@ -17,6 +18,7 @@ void Deck::swap(Card& a, Card& b) {
 }
 void Deck::shuffle() {
 	const int numberOfShuffles = 5;
+	srand(time(0));
 	for (int j = 0; j < numberOfShuffles; j++) {
 		//ňóńóĺě ęîëîäó
 		for (int i = 0; i < deck_size; i++) {
