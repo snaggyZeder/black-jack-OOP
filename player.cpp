@@ -1,4 +1,4 @@
-#include"deck.h"
+﻿#include"deck.h"
 #include"card.h"
 #include<vector>
 #include"hand.h"
@@ -15,12 +15,13 @@ void Player::playp(Deck& fDeck) {
 	while (choice == 'y') {
 			takeOneCard(fDeck);
 			printHand();
-			score = score + calculateScore();
+			score = calculateScore();
 			cout << "Your summ is " << score << endl;
+			cout << endl;
 		
 			if (score >= 21) { break; }
-			do { cout << " (enter your choice, y - yes, n - no) ";  cin >>choice;}
+			do { cout << " (enter your choice, y - yes, n - no) "; cout << endl;  cin >>choice;}
 			while (choice!='y' && choice!='n');
-			if (choice == 'n') { cout << "its final sum " << endl; break; }
+			if (choice == 'n') { cout << "its final sum of your cards " << endl; cout << endl; break; }
 	}
 }

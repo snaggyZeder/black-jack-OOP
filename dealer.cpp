@@ -1,4 +1,4 @@
-#include"deck.h"
+п»ї#include"deck.h"
 #include"card.h"
 #include<vector>
 #include"hand.h"
@@ -8,12 +8,12 @@
 using namespace std;
 
 void Dealer::playd(Deck& fdeck) {
-	//диллер берет карты пока не наберёт 17 или больше
-	//пока  счёт меньше 17
+	//РґРёР»Р»РµСЂ Р±РµСЂРµС‚ РєР°СЂС‚С‹ РїРѕРєР° РЅРµ РЅР°Р±РµСЂС‘С‚ 17 РёР»Рё Р±РѕР»СЊС€Рµ
+	//РїРѕРєР°  СЃС‡С‘С‚ РјРµРЅСЊС€Рµ 17
 	do {
-		// берем карту 
+		// Р±РµСЂРµРј РєР°СЂС‚Сѓ 
 		takeOneCard(fdeck);
 	} while (calculateScore() < 17);
 	printHand();
-	cout << "dialer summ is " << calculateScore() << endl;
+	cout << "dialer summ is " << calculateScore() << endl; cout << endl;
 }

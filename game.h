@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include <iostream>
 #include "card.h"
 #include "deck.h"
@@ -8,6 +8,6 @@
 using namespace std;
 class Game {
 public:
-	void gaming();
+	void gaming(unsigned int&,  unsigned int&,  unsigned int& ,unsigned int&);
 	
 };

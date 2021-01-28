@@ -1,4 +1,4 @@
-#include"deck.h"
+﻿#include"deck.h"
 #include"card.h"
 #include<vector>
 #include <iostream>
@@ -29,6 +29,7 @@ unsigned int Hand::calculateScore() {
 Hand::GameStatus Hand::checkGameStatus() {
 	int score = calculateScore();
 	if (score < 21) {return Hand::GAME_CONTINUE;}
-	else if(score==21){	return Hand::WIN_;}
-	else  return Hand::LOOSE_; 
+	else
+		if (score == 21) {return Hand::WIN_;}
+		else return Hand::LOOSE_; 
 }
