@@ -32,7 +32,6 @@ public:
 	Card(CardRank, CardSuits);
 	void print_card();
 	int get_score();
-	/*friend std::ostream& operator<<(std::ostream& , Card&);*/
 	CardRank get_rank();
 	CardSuits get_suits();
 private:

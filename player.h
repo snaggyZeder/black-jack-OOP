@@ -8,5 +8,5 @@
 class Player:public Hand{
 public:
 	void playp(Deck&);
-	
+
 };
