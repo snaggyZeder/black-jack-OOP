@@ -16,4 +16,5 @@ void Dealer::playd(Deck& fdeck) {
 	} while (calculateScore() < 17);
 	printHand();
 	cout << "dialer summ is " << calculateScore() << endl; cout << endl;
+
 }

@@ -7,6 +7,6 @@
 
 class Player:public Hand{
 public:
-	void playp(Deck&);
-
+	void playp1(Deck&);
+	void playp2(Deck&);
 };
