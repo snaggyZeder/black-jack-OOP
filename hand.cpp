@@ -12,10 +12,11 @@ void Hand::printHand() {
 	}
 }
 
-void Hand::takeOneCard(Deck&fdeck) {
+void Hand::takeOneCard(Deck& fdeck) {
 	Card cardTemp = fdeck.pop();
 	m_hand.push_back(cardTemp);
 }
+
 
 unsigned int Hand::calculateScore() {
 	int size = m_hand.size();
@@ -28,8 +29,9 @@ unsigned int Hand::calculateScore() {
 
 Hand::GameStatus Hand::checkGameStatus() {
 	int score = calculateScore();
-	if (score < 21) {return Hand::GAME_CONTINUE;}
+	if (score < 21) { return Hand::GAME_CONTINUE; }
 	else
-		if (score == 21) {return Hand::WIN_;}
-		else return Hand::LOOSE_; 
+		if (score == 21) { return Hand::WIN_; }
+		else if (score > 21) { return Hand::LOOSE_; }
+	
 }

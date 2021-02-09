@@ -14,7 +14,7 @@ private:
 	unsigned int fdraw;
 	unsigned int fcountofGame;*/
 public:
-	
-	void gaming(unsigned int&,  unsigned int&,  unsigned int& ,unsigned int&, unsigned int& playerWin2);
+
+	void gaming(unsigned int&, unsigned int&, unsigned int&, unsigned int&, unsigned int& playerWin2);
 	/*void countScore();*/
 };

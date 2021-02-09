@@ -9,15 +9,18 @@ private:
 protected:
 	std::vector<Card> m_hand;
 public:
+
 	enum GameStatus {
 		GAME_CONTINUE,
 		WIN_,
 		LOOSE_,
-		MAX_STATUS
+		MAX_STATUS,
+		GAME_SKIP
 	};
-	//Hand();
+	
 	void takeOneCard(Deck&);
 	void printHand();
-	unsigned int calculateScore(); 
+	unsigned int calculateScore();
 	GameStatus checkGameStatus();
+
 };
