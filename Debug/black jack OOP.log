@@ -1,12 +1,2 @@
-﻿  dealer.cpp
-  game.cpp
-D:\black jack OOP\black jack OOP\black jack OOP\game.cpp(68,53): warning C4804:  >: небезопасное использование типа "bool" в операции
-D:\black jack OOP\black jack OOP\black jack OOP\game.cpp(72,58): warning C4804:  >: небезопасное использование типа "bool" в операции
-  hand.cpp
-  main.cpp
-D:\black jack OOP\black jack OOP\black jack OOP\game.cpp(77,58): warning C4804:  >: небезопасное использование типа "bool" в операции
-  player.cpp
-  Создание кода...
-D:\black jack OOP\black jack OOP\black jack OOP\main.cpp(14,7): warning C4101:  game_score: неиспользованная локальная переменная
-D:\black jack OOP\black jack OOP\black jack OOP\hand.cpp(37): warning C4715:  Hand::checkGameStatus: значение возвращается не при всех путях выполнения
+﻿  game.cpp
   black jack OOP.vcxproj -> D:\black jack OOP\black jack OOP\Debug\black jack OOP.exe
