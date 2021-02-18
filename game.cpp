@@ -73,9 +73,9 @@ void Game::gaming(unsigned int& playerWin, unsigned int& dealerWin, unsigned int
 				dealer.playd(my_deck);
 				currentGameStatusd = dealer.checkGameStatus();
 
-				int playerScore1 = player1.calculateScore();
-				int playerScore2 = player2.calculateScore();
-				int dealerScore = dealer.calculateScore();
+				int playerScore1 = player1.calculateScore(); if (playerScore1 > 21) { playerScore1 = 0; }
+				int playerScore2 = player2.calculateScore(); if (playerScore2 > 21) { playerScore2 = 0; }
+				int dealerScore = dealer.calculateScore(); if (dealerScore > 21) { dealerScore = 0; }
 
 
 
@@ -83,16 +83,8 @@ void Game::gaming(unsigned int& playerWin, unsigned int& dealerWin, unsigned int
 					cout << "Dealer wins!" << endl; cout << endl; dealerWin++;
 					pl1 = false;
 				}
-				else if (currentGameStatusd == Hand::LOOSE_) {
-					cout << "dealer lose!" << endl; cout << endl;
-					pl1 = false;
-				}
 
-
-
-				
-
-				else  if (playerScore1 == playerScore2 && playerScore2 == dealerScore) {
+   	         else  if (playerScore1 == playerScore2 && playerScore2 == dealerScore) {
 					cout << "Draw!" << endl; cout << endl; countDraw++; pl1 = false;
 				}
 				else if (dealerScore > playerScore1 && dealerScore > playerScore2) {
@@ -106,10 +98,16 @@ void Game::gaming(unsigned int& playerWin, unsigned int& dealerWin, unsigned int
 					cout << "Player2  wins!" << endl; cout << endl; playerWin2++; pl1 = false;
 				}
 
+				else if (currentGameStatusd == Hand::LOOSE_) {
+					cout << "dealer lose!" << endl; cout << endl;
+					pl1 = false;
+				}
 
 
+			
 
-				if (currentGameStatus2 == Hand::LOOSE_ && currentGameStatusd == Hand::LOOSE_) {
+
+				else if (currentGameStatus2 == Hand::LOOSE_ && currentGameStatusd == Hand::LOOSE_) {
 					cout << "player1  wins!" << endl; cout << endl; playerWin++; pl1 = false;
 				}
 
@@ -117,6 +115,10 @@ void Game::gaming(unsigned int& playerWin, unsigned int& dealerWin, unsigned int
 					cout << "player2  wins!" << endl; cout << endl; playerWin2++; pl1 = false;
 				}
 
+			   
+			
+			
+			
 			}
 
 			
