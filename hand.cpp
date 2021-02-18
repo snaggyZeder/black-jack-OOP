@@ -15,6 +15,7 @@ void Hand::printHand() {
 void Hand::takeOneCard(Deck& fdeck) {
 	Card cardTemp = fdeck.pop();
 	m_hand.push_back(cardTemp);
+	/*printHand(); cout << endl;*/
 }
 
 

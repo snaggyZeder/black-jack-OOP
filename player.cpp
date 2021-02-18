@@ -11,10 +11,8 @@ using namespace std;
 void Player::playp1(Deck& fDeck) {
 	char choice = 'y';
 	int score = 0;
-	Hand::GameStatus currentGameStatus = Hand::GAME_CONTINUE;
 
-
-	
+	//do { cout << " (enter your choice, y - yes, n - no) ";  cin >> choice; } while (choice != 'y' && choice != 'n');
 
 	while (choice == 'y') {
 		takeOneCard(fDeck);
@@ -35,12 +33,8 @@ void Player::playp1(Deck& fDeck) {
 void Player::playp2(Deck& fDeck) {
 	char choice = 'y';
 	int score = 0;
-	Hand::GameStatus currentGameStatus = Hand::GAME_CONTINUE;
-
 	
-
-	
-
+	//do { cout << " (enter your choice, y - yes, n - no) ";  cin >> choice; } while (choice != 'y' && choice != 'n');
 
 	while (choice == 'y') {
 		takeOneCard(fDeck);
