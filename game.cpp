@@ -33,7 +33,7 @@ void Game::gaming(unsigned int& playerWin, unsigned int& dealerWin, unsigned int
 
 	while (pl1 == true) {
 
-		cout << "player1 your turn!" << endl;
+		cout << "Player1 your turn!" << endl; cout << endl;
 		player1.playp1(my_deck);
 		currentGameStatus1 = player1.checkGameStatus();
 
@@ -49,7 +49,7 @@ void Game::gaming(unsigned int& playerWin, unsigned int& dealerWin, unsigned int
 
 		 if (currentGameStatus1 == Hand::GAME_CONTINUE || currentGameStatus1 == Hand::LOOSE_) {
 
-			cout << "player2 your turn!" << endl;
+			 cout << "Player2 your turn!" << endl; cout << endl;
 			player2.playp2(my_deck);
 			currentGameStatus2 = player2.checkGameStatus();
 
@@ -69,7 +69,7 @@ void Game::gaming(unsigned int& playerWin, unsigned int& dealerWin, unsigned int
 
 			 if (currentGameStatus2 == Hand::GAME_CONTINUE || currentGameStatus2 == Hand::LOOSE_) {
 
-				cout << "player3 your turn!" << endl;
+				 cout << "Player3 your turn!" << endl; cout << endl;
 				player3.playp3(my_deck);
 				currentGameStatus3 = player3.checkGameStatus();
 
@@ -88,7 +88,7 @@ void Game::gaming(unsigned int& playerWin, unsigned int& dealerWin, unsigned int
 
 				else if (currentGameStatus3 == Hand::GAME_CONTINUE || currentGameStatus3 == Hand::LOOSE_) {
 
-					cout << "dealer your turn!" << endl;
+					cout << "Dealer your turn!" << endl; cout << endl;
 					dealer.playd(my_deck);
 					currentGameStatusd = dealer.checkGameStatus();
 
@@ -131,10 +131,10 @@ void Game::gaming(unsigned int& playerWin, unsigned int& dealerWin, unsigned int
 					}
 
 					else if (currentGameStatus1 == Hand::LOOSE_ && currentGameStatusd == Hand::LOOSE_ && currentGameStatus3==Hand::LOOSE_) {
-						cout << "player2  wins!" << endl; cout << endl; playerWin2++; pl1 = false;
+						cout << "Player2  wins!" << endl; cout << endl; playerWin2++; pl1 = false;
 					}
 					else if (currentGameStatus1 == Hand::LOOSE_ && currentGameStatusd == Hand::LOOSE_ && currentGameStatus2 == Hand::LOOSE_) {
-						cout << "player3  wins!" << endl; cout << endl; playerWin3++; pl1 = false;
+						cout << "Player3  wins!" << endl; cout << endl; playerWin3++; pl1 = false;
 					}
 
 

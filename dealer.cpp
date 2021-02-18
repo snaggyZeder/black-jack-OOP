@@ -15,6 +15,6 @@ void Dealer::playd(Deck& fdeck) {
 		takeOneCard(fdeck);
 	} while (calculateScore() < 17);
 	printHand();
-	cout << "dialer summ is " << calculateScore() << endl; cout << endl;
+	cout << "dialer summ = " << calculateScore() << endl; cout << endl;
 
 }
