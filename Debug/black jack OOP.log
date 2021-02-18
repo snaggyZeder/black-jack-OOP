@@ -1,6 +1,2 @@
 ﻿  game.cpp
-  hand.cpp
-  player.cpp
-  Создание кода...
-D:\black jack OOP\black jack OOP\black jack OOP\hand.cpp(38): warning C4715:  Hand::checkGameStatus: значение возвращается не при всех путях выполнения
   black jack OOP.vcxproj -> D:\black jack OOP\black jack OOP\Debug\black jack OOP.exe
