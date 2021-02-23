@@ -96,29 +96,44 @@ void Game::gaming(unsigned int& playerWin, unsigned int& dealerWin, unsigned int
 					int dealerScore = dealer.calculateScore(); if (dealerScore > 21) { dealerScore = 0; }
 					
 
-
 					if (currentGameStatusd == Hand::WIN_) {
 						cout << "Dealer wins!" << endl; cout << endl; dealerWin++;
 						pl1 = false;
 					}
+
 					//kogda vce ravny
 					else  if (playerScore1 == playerScore2 && playerScore2 == dealerScore && dealerScore==playerScore3) {
 						cout << "Draw!" << endl; cout << endl; countDraw++; pl1 = false;
 					}
-					//kogda  1 proigraal 
+
+					//kogda  1 proigraal status
 					else  if (playerScore1 == playerScore2 && playerScore2 ==playerScore3  && currentGameStatusd == Hand::LOOSE_) {
 						cout << "Draw!" << endl; cout << endl; countDraw++; pl1 = false;
 					}
 					else  if (playerScore1 == playerScore2 && playerScore2 == dealerScore && currentGameStatus3 == Hand::LOOSE_) {
 						cout << "Draw!" << endl; cout << endl; countDraw++; pl1 = false;
 					} 
-					else  if (playerScore1 == playerScore2 && playerScore3 == dealerScore && currentGameStatus2 == Hand::LOOSE_) {
+					else  if (playerScore1 == playerScore3 && playerScore3 == dealerScore && currentGameStatus2 == Hand::LOOSE_) {
 						cout << "Draw!" << endl; cout << endl; countDraw++; pl1 = false;
 					}
 					else  if (playerScore2 == playerScore3 && playerScore3 == dealerScore && currentGameStatus1 == Hand::LOOSE_) {
 						cout << "Draw!" << endl; cout << endl; countDraw++; pl1 = false;
 					}
-					//kogda 2 loose: pl1
+					//kogda 1 loose score
+					else  if (playerScore1 == playerScore2 && playerScore2 == playerScore3 && dealerScore <playerScore1) {
+						cout << "Draw!" << endl; cout << endl; countDraw++; pl1 = false;
+					}
+					else  if (playerScore1 == playerScore2 && playerScore2 == dealerScore && playerScore3< playerScore1) {
+						cout << "Draw!" << endl; cout << endl; countDraw++; pl1 = false;
+					}
+					else  if (playerScore1 == playerScore3 && playerScore3 == dealerScore && playerScore2 < playerScore1) {
+						cout << "Draw!" << endl; cout << endl; countDraw++; pl1 = false;
+					}
+					else  if (playerScore2 == playerScore3 && playerScore3 == dealerScore && playerScore1 < playerScore2) {
+						cout << "Draw!" << endl; cout << endl; countDraw++; pl1 = false;
+					}
+
+					//kogda 2 loose: pl1 status
 					else  if (playerScore1 == playerScore2 && currentGameStatus3 == Hand::LOOSE_ && currentGameStatusd == Hand::LOOSE_) {
 						cout << "Draw!" << endl; cout << endl; countDraw++; pl1 = false;
 					}
@@ -128,6 +143,23 @@ void Game::gaming(unsigned int& playerWin, unsigned int& dealerWin, unsigned int
 					else  if (playerScore1 == dealerScore && currentGameStatus2 == Hand::LOOSE_ && currentGameStatus3 == Hand::LOOSE_) {
 						cout << "Draw!" << endl; cout << endl; countDraw++; pl1 = false;
 					}
+					//kogda 2 loose:pl1 score 
+					else  if (playerScore1 == playerScore2 && playerScore2 > playerScore3 && dealerScore < playerScore1) {
+						cout << "Draw!" << endl; cout << endl; countDraw++; pl1 = false;
+					}
+					else  if (playerScore1 == playerScore2 && playerScore2 > dealerScore && playerScore3 < playerScore1) {
+						cout << "Draw!" << endl; cout << endl; countDraw++; pl1 = false;
+					}
+					else  if (playerScore1 == playerScore3 && playerScore3 > dealerScore && playerScore2 < playerScore1) {
+						cout << "Draw!" << endl; cout << endl; countDraw++; pl1 = false;
+					}
+					else  if (playerScore2 == playerScore3 && playerScore3 > dealerScore && playerScore1 < playerScore2) {
+						cout << "Draw!" << endl; cout << endl; countDraw++; pl1 = false;
+					}
+
+
+
+
 					//kogda 2 loose :pl2
 					else  if (playerScore2 == playerScore1 && currentGameStatus3 == Hand::LOOSE_ && currentGameStatusd == Hand::LOOSE_) {
 						cout << "Draw!" << endl; cout << endl; countDraw++; pl1 = false;
@@ -138,6 +170,7 @@ void Game::gaming(unsigned int& playerWin, unsigned int& dealerWin, unsigned int
 					else  if (playerScore2 == dealerScore && currentGameStatus1 == Hand::LOOSE_ && currentGameStatus3 == Hand::LOOSE_) {
 						cout << "Draw!" << endl; cout << endl; countDraw++; pl1 = false;
 					}
+
 					//kogda 2 loose :pl3
 					else  if (playerScore3 == playerScore1 && currentGameStatus2 == Hand::LOOSE_ && currentGameStatusd == Hand::LOOSE_) {
 						cout << "Draw!" << endl; cout << endl; countDraw++; pl1 = false;
