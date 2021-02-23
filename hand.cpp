@@ -24,6 +24,10 @@ unsigned int Hand::calculateScore() {
 	unsigned int score = 0;
 	for (int i = 0; i < size; i++) {
 		score += m_hand[i].get_score();
+		
+		if (m_hand[i].get_rank() == Card::CARD_A && score + 10 <= 21) {
+			score += 10;
+		}
 	}
 	return score;
 }

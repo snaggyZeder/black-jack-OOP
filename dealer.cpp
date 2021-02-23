@@ -4,7 +4,7 @@
 #include"hand.h"
 #include"player.h"
 #include <string>
-#include"dialer.h"
+#include"dealer.h"
 using namespace std;
 
 void Dealer::playd(Deck& fdeck) {
@@ -15,6 +15,6 @@ void Dealer::playd(Deck& fdeck) {
 		takeOneCard(fdeck);
 	} while (calculateScore() < 17);
 	printHand();
-	cout << "dialer summ = " << calculateScore() << endl; cout << endl;
+	cout << "Dealer summ = " << calculateScore() << endl; cout << endl;
 
 }

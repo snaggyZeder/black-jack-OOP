@@ -62,9 +62,7 @@ void Game::gaming(unsigned int& playerWin, unsigned int& dealerWin, unsigned int
 				cout << "Player2 lose!" << endl; cout << endl;
 
 			}
-			/*if (currentGameStatus2 == Hand::LOOSE_ && currentGameStatus1 == Hand::LOOSE_) {
-				cout << "Dealer win !" << endl; cout << endl; dealerWin++; pl1 = false;
-			}*/
+			
 
 
 			 if (currentGameStatus2 == Hand::GAME_CONTINUE || currentGameStatus2 == Hand::LOOSE_) {
@@ -96,7 +94,7 @@ void Game::gaming(unsigned int& playerWin, unsigned int& dealerWin, unsigned int
 					int playerScore2 = player2.calculateScore(); if (playerScore2 > 21) { playerScore2 = 0; }
 					int playerScore3 = player3.calculateScore(); if (playerScore3 > 21) { playerScore3 = 0; }
 					int dealerScore = dealer.calculateScore(); if (dealerScore > 21) { dealerScore = 0; }
-
+					
 
 
 					if (currentGameStatusd == Hand::WIN_) {
@@ -107,6 +105,19 @@ void Game::gaming(unsigned int& playerWin, unsigned int& dealerWin, unsigned int
 					else  if (playerScore1 == playerScore2 && playerScore2 == dealerScore && dealerScore==playerScore3) {
 						cout << "Draw!" << endl; cout << endl; countDraw++; pl1 = false;
 					}
+					else  if (playerScore1 == playerScore2 && playerScore2 ==playerScore3  && currentGameStatusd == Hand::LOOSE_) {
+						cout << "Draw!" << endl; cout << endl; countDraw++; pl1 = false;
+					}
+					else  if (playerScore1 == playerScore2 && playerScore2 == dealerScore && currentGameStatus3 == Hand::LOOSE_) {
+						cout << "Draw!" << endl; cout << endl; countDraw++; pl1 = false;
+					} 
+					else  if (playerScore1 == playerScore2 && playerScore3 == dealerScore && currentGameStatus2 == Hand::LOOSE_) {
+						cout << "Draw!" << endl; cout << endl; countDraw++; pl1 = false;
+					}
+					else  if (playerScore2 == playerScore3 && playerScore3 == dealerScore && currentGameStatus1 == Hand::LOOSE_) {
+						cout << "Draw!" << endl; cout << endl; countDraw++; pl1 = false;
+					}
+
 					else if (dealerScore > playerScore1 && dealerScore > playerScore2 && dealerScore>playerScore3) {
 						cout << "Dealer wins!" << endl; cout << endl; dealerWin++; pl1 = false;
 					}
