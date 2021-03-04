@@ -1,10 +1,14 @@
-﻿#include <iostream>
+﻿#include <SFML/Graphics.hpp>
+
+#include <iostream>
 #include "card.h"
 #include "deck.h"
 #include "hand.h"
 #include "player.h"
 #include "dealer.h"
 #include "game.h"
+
+
 using namespace std;
 
 
@@ -29,9 +33,23 @@ void Game::gaming(unsigned int& playerWin, unsigned int& dealerWin, unsigned int
 
 	//player1.takeOneCard(my_deck);
 	//player2.takeOneCard(my_deck);
+	sf::RenderWindow window(sf::VideoMode(800, 600), "SFML Works!");
 
 
-	while (pl1 == true) {
+	while (window.isOpen())
+	{
+		// Обрабатываем очередь событий в цикле
+		sf::Event event;
+		while (window.pollEvent(event))
+		{
+			// Пользователь нажал на «крестик» и хочет закрыть окно?
+			if (event.type == sf::Event::Closed)
+				// тогда закрываем его
+				window.close();
+		}
+
+
+
 
 		cout << "Player1 your turn!" << endl; cout << endl;
 		player1.playp1(my_deck);
@@ -231,8 +249,12 @@ void Game::gaming(unsigned int& playerWin, unsigned int& dealerWin, unsigned int
 
 
 		////
+
+		window.clear(sf::Color(250, 220, 100, 0));
+
+		window.display();
+
+		countGame++;
+
 	}
-
-	countGame++;
-
 }

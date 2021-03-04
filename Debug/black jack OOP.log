@@ -1,2 +1,3 @@
 ﻿  game.cpp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1263,5): warning MSB8012: TargetPath(D:\black jack OOP\black jack OOP\Debug\black jack OOP.exe) does not match the Linker's OutputFile property value (). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
   black jack OOP.vcxproj -> D:\black jack OOP\black jack OOP\Debug\black jack OOP.exe
