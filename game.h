@@ -1,4 +1,7 @@
 ﻿#pragma once
+
+#include <SFML/Graphics.hpp>
+
 #include <iostream>
 #include "card.h"
 #include "deck.h"
@@ -15,6 +18,6 @@ private:
 	unsigned int fcountofGame;*/
 public:
 
-	void gaming(unsigned int&, unsigned int&, unsigned int&, unsigned int&, unsigned int& playerWin2, unsigned int&);
+	void gaming(unsigned int&, unsigned int&, unsigned int&, unsigned int&, unsigned int& playerWin2, unsigned int&, sf::RenderWindow& window);
 	/*void countScore();*/
 };

@@ -12,7 +12,7 @@
 using namespace std;
 
 
-void Game::gaming(unsigned int& playerWin, unsigned int& dealerWin, unsigned int& countDraw, unsigned int& countGame, unsigned int& playerWin2, unsigned int& playerWin3) {
+void Game::gaming(unsigned int& playerWin, unsigned int& dealerWin, unsigned int& countDraw, unsigned int& countGame, unsigned int& playerWin2, unsigned int& playerWin3, sf::RenderWindow& window) {
 	Deck my_deck;
 	my_deck.shuffle();
 	//my_deck.print_deck();
@@ -22,6 +22,8 @@ void Game::gaming(unsigned int& playerWin, unsigned int& dealerWin, unsigned int
 	Dealer dealer;
 
 	int playerScore1 = 0; int playerScore2 = 0; int playerScore3 = 0; int dealerScore = 0;
+
+	
 
 	Hand::GameStatus currentGameStatus1 = Hand::GAME_CONTINUE;
 	Hand::GameStatus currentGameStatus2 = Hand::GAME_CONTINUE;
@@ -33,22 +35,19 @@ void Game::gaming(unsigned int& playerWin, unsigned int& dealerWin, unsigned int
 
 	//player1.takeOneCard(my_deck);
 	//player2.takeOneCard(my_deck);
-	sf::RenderWindow window(sf::VideoMode(800, 600), "SFML Works!");
+	/*sf::RenderWindow window(sf::VideoMode(800, 600), "Black jack!");*/
 
 
-	while (window.isOpen())
-	{
-		// Обрабатываем очередь событий в цикле
-		sf::Event event;
-		while (window.pollEvent(event))
-		{
-			// Пользователь нажал на «крестик» и хочет закрыть окно?
-			if (event.type == sf::Event::Closed)
-				// тогда закрываем его
-				window.close();
-		}
-
-
+	//while (window.isOpen()){
+	//	// Обрабатываем очередь событий в цикле
+	//	sf::Event event;
+	//	while (window.pollEvent(event))
+	//	{
+	//		// Пользователь нажал на «крестик» и хочет закрыть окно?
+	//		if (event.type == sf::Event::Closed)
+	//			// тогда закрываем его
+	//			window.close();
+	//	}
 
 
 		cout << "Player1 your turn!" << endl; cout << endl;
@@ -162,10 +161,10 @@ void Game::gaming(unsigned int& playerWin, unsigned int& dealerWin, unsigned int
 						cout << "Draw!" << endl; cout << endl; countDraw++; pl1 = false;
 					}
 					//kogda 2 loose :pl1 score 
-					else  if (playerScore1 == playerScore2 && playerScore2 > playerScore3 && dealerScore < playerScore1) {
+					else  if (playerScore1 == playerScore2 && playerScore2 > playerScore3 &&  playerScore1<dealerScore ) {
 						cout << "Draw!" << endl; cout << endl; countDraw++; pl1 = false;
 					}
-					else  if (playerScore1 == playerScore3 && playerScore3 > dealerScore && playerScore2 < playerScore1) {
+					else  if (playerScore1 == playerScore3 && playerScore3 > dealerScore && playerScore1 < playerScore2) {
 						cout << "Draw!" << endl; cout << endl; countDraw++; pl1 = false;
 					}
 					else  if (playerScore1 == dealerScore && playerScore1 > playerScore2 && playerScore3 < dealerScore) {
@@ -250,11 +249,8 @@ void Game::gaming(unsigned int& playerWin, unsigned int& dealerWin, unsigned int
 
 		////
 
-		window.clear(sf::Color(250, 220, 100, 0));
-
-		window.display();
 
 		countGame++;
 
-	}
+	//}
 }

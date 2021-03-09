@@ -1,4 +1,7 @@
 ﻿#pragma once
+
+#include <SFML/Graphics.hpp>
+
 #include  <fstream>
 #include <iostream>
 class Card
@@ -34,8 +37,15 @@ public:
 	int get_score();
 	CardRank get_rank();
 	CardSuits get_suits();
+	sf::Sprite& getSprite();
+
 private:
 	CardRank m_rank;
 	CardSuits m_suit;
 	
+	float x; float y; float cardWidth; float cardHeight;
+	sf::Texture cardTexture;
+	sf::Image cardImage;
+	sf::Sprite cardSprite;
+
 };

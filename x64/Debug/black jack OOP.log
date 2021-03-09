@@ -1,0 +1,15 @@
+﻿  card.cpp
+  deck.cpp
+D:\black jack OOP\black jack OOP\black jack OOP\card.cpp(1,10): error C1083:  Не удается открыть файл включение: SFML/Graphics.hpp: No such file or directory,
+  dealer.cpp
+D:\black jack OOP\black jack OOP\black jack OOP\card.h(3,10): error C1083:  Не удается открыть файл включение: SFML/Graphics.hpp: No such file or directory,
+  game.cpp
+D:\black jack OOP\black jack OOP\black jack OOP\card.h(3,10): error C1083:  Не удается открыть файл включение: SFML/Graphics.hpp: No such file or directory,
+  hand.cpp
+D:\black jack OOP\black jack OOP\black jack OOP\game.cpp(1,10): error C1083:  Не удается открыть файл включение: SFML/Graphics.hpp: No such file or directory,
+  main.cpp
+D:\black jack OOP\black jack OOP\black jack OOP\card.h(3,10): error C1083:  Не удается открыть файл включение: SFML/Graphics.hpp: No such file or directory,
+  player.cpp
+D:\black jack OOP\black jack OOP\black jack OOP\main.cpp(1,10): error C1083:  Не удается открыть файл включение: SFML/Graphics.hpp: No such file or directory,
+  Создание кода...
+D:\black jack OOP\black jack OOP\black jack OOP\card.h(3,10): error C1083:  Не удается открыть файл включение: SFML/Graphics.hpp: No such file or directory,
