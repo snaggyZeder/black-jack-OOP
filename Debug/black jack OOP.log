@@ -1,25 +1,2 @@
-﻿  card.cpp
-D:\black jack OOP\black jack OOP\black jack OOP\card.cpp(27,58): warning C4244:  аргумент: преобразование "float" в "T", возможна потеря данных
-D:\black jack OOP\black jack OOP\black jack OOP\card.cpp(27,58): warning C4244:         with
-D:\black jack OOP\black jack OOP\black jack OOP\card.cpp(27,58): warning C4244:         [
-D:\black jack OOP\black jack OOP\black jack OOP\card.cpp(27,58): warning C4244:             T=int
-D:\black jack OOP\black jack OOP\black jack OOP\card.cpp(27,58): warning C4244:         ]
-  dealer.cpp
-  deck.cpp
-D:\black jack OOP\black jack OOP\black jack OOP\card.cpp(27,47): warning C4244:  аргумент: преобразование "float" в "T", возможна потеря данных
-D:\black jack OOP\black jack OOP\black jack OOP\card.cpp(27,47): warning C4244:         with
-D:\black jack OOP\black jack OOP\black jack OOP\card.cpp(27,47): warning C4244:         [
-D:\black jack OOP\black jack OOP\black jack OOP\card.cpp(27,47): warning C4244:             T=int
-D:\black jack OOP\black jack OOP\black jack OOP\card.cpp(27,47): warning C4244:         ]
-  game.cpp
-  hand.cpp
-  main.cpp
-D:\black jack OOP\black jack OOP\black jack OOP\deck.cpp(21,12): warning C4244:  аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-D:\black jack OOP\black jack OOP\black jack OOP\main.cpp(16,7): warning C4101:  my_game: неиспользованная локальная переменная
-  player.cpp
-  Создание кода...
-D:\black jack OOP\black jack OOP\black jack OOP\main.cpp(17,7): warning C4101:  game_score: неиспользованная локальная переменная
-D:\black jack OOP\black jack OOP\black jack OOP\hand.cpp(42): warning C4715:  Hand::checkGameStatus: значение возвращается не при всех путях выполнения
-D:\black jack OOP\black jack OOP\black jack OOP\card.cpp(86): warning C4715:  Card::get_score: значение возвращается не при всех путях выполнения
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1263,5): warning MSB8012: TargetPath(D:\black jack OOP\black jack OOP\Debug\black jack OOP.exe) does not match the Linker's OutputFile property value (). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(1263,5): warning MSB8012: TargetPath(D:\black jack OOP\black jack OOP\Debug\black jack OOP.exe) does not match the Linker's OutputFile property value (). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
   black jack OOP.vcxproj -> D:\black jack OOP\black jack OOP\Debug\black jack OOP.exe

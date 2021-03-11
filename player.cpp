@@ -8,7 +8,7 @@
 using namespace std;
 
 
-void Player::playp1(Deck& fDeck) {
+void Player::playp1(Deck& fDeck, sf::RenderWindow& window) {
 	char choice = 'y';
 	int score = 0;
 
@@ -17,6 +17,7 @@ void Player::playp1(Deck& fDeck) {
 	while (choice == 'y') {
 		takeOneCard(fDeck);
 		printHand();
+		drawHand(window);
 		score = calculateScore();
 		cout << "Player1 summ is =" << score << endl;
 		cout << endl;
@@ -30,7 +31,7 @@ void Player::playp1(Deck& fDeck) {
 	}
 
 
-void Player::playp2(Deck& fDeck) {
+void Player::playp2(Deck& fDeck, sf::RenderWindow& window) {
 	char choice = 'y';
 	int score = 0;
 
@@ -39,6 +40,7 @@ void Player::playp2(Deck& fDeck) {
 	while (choice == 'y') {
 		takeOneCard(fDeck);
 		printHand();
+		drawHand(window);
 		score = calculateScore();
 		cout << "Player2 summ is =" << score << endl;
 		cout << endl;
@@ -53,7 +55,7 @@ void Player::playp2(Deck& fDeck) {
 
 
 
-void Player::playp3(Deck& fDeck) {
+void Player::playp3(Deck& fDeck, sf::RenderWindow& window) {
 	char choice = 'y';
 	int score = 0;
 
@@ -62,6 +64,7 @@ void Player::playp3(Deck& fDeck) {
 	while (choice == 'y') {
 		takeOneCard(fDeck);
 		printHand();
+		drawHand(window);
 		score = calculateScore();
 		cout << "Player3 summ is =" << score << endl;
 		cout << endl;

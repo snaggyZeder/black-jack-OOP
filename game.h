@@ -15,7 +15,7 @@ private:
 	/*unsigned int fpW;
 	unsigned int fdW;
 	unsigned int fdraw;
-	unsigned int fcountofGame;*/
+	unsigned int fcountofGame;*/ 
 public:
 
 	void gaming(unsigned int&, unsigned int&, unsigned int&, unsigned int&, unsigned int& playerWin2, unsigned int&, sf::RenderWindow& window);

@@ -1,4 +1,7 @@
 ﻿#pragma once
+
+#include <SFML/Graphics.hpp>
+
 #include"deck.h"
 #include"card.h"
 #include<vector>
@@ -22,5 +25,5 @@ public:
 	void printHand();
 	unsigned int calculateScore();
 	GameStatus checkGameStatus();
-
+	void drawHand(sf::RenderWindow& window);
 };

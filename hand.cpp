@@ -1,4 +1,6 @@
-﻿#include"deck.h"
+﻿#include <SFML/Graphics.hpp>
+
+#include"deck.h"
 #include"card.h"
 #include<vector>
 #include <iostream>
@@ -39,4 +41,16 @@ Hand::GameStatus Hand::checkGameStatus() {
 		if (score == 21) { return Hand::WIN_; }
 		else if (score > 21) { return Hand::LOOSE_; }
 	
+}
+
+void Hand::drawHand(sf::RenderWindow& window) {
+	int size = m_hand.size();
+	
+	int x0 = 50;
+	int y0 = 50;
+	for (int i = 0; i < size; i++) {
+		int newX = x0 + i * 1.2 *m_hand[i].getWidth();
+		m_hand[i].drawCard(window);
+	}
+
 }

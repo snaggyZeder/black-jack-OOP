@@ -1,4 +1,7 @@
 ﻿#pragma once
+
+#include <SFML/Graphics.hpp>
+
 #include"deck.h"
 #include"card.h"
 #include<vector>
@@ -7,7 +10,7 @@
 
 class Player:public Hand{
 public:
-	void playp1(Deck&);
-	void playp2(Deck&);
-	void playp3(Deck&);
+	void playp1(Deck&, sf::RenderWindow& window);
+	void playp2(Deck&, sf::RenderWindow& window);
+	void playp3(Deck&, sf::RenderWindow& window);
 };

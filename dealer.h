@@ -5,5 +5,5 @@
 #include"hand.h"
 class Dealer:public Hand {
 public:
-	void playd(Deck&);
-};
+	void playd(Deck&, sf::RenderWindow& window);
+}; 

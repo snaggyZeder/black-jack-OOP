@@ -7,8 +7,8 @@
 #include"dealer.h"
 using namespace std;
 
-void Dealer::playd(Deck& fdeck) {
-	//диллер берет карты пока не наберёт 17 или больше
+void Dealer::playd(Deck& fdeck, sf::RenderWindow& window) {
+	//диллер берет карты пока не наберёт 17 или больше  
 	//пока  счёт меньше 17
 	do {
 		// берем карту 
